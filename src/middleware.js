@@ -6,7 +6,7 @@ export default withAuth(
   (req) => {
     // ① NextAuth tarafından eklenen token'ı al
     const token = req.nextauth.token;
-
+    console.log("yarak furkan")
     // ② Henüz giriş yapılmamışsa direkt /login'e at
     if (!token) {
       return NextResponse.redirect(new URL("/login", req.url));
@@ -63,8 +63,8 @@ export const config = {
     "/admin",            
     "/admin/:path*",
     // SuperAdmin korunsun
-    "/superadmin",       
-    "/superadmin/:path*",
+    "/superAdmin",       
+    "/superAdmin/:path*",
     // User korunsun
     "/user",             
     "/user/:path*",

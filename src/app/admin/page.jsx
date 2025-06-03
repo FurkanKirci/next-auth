@@ -5,9 +5,9 @@ import { authOptions } from "../api/auth/[...nextauth]/route";
 const AdminPage = async () => {
   const session = await getServerSession(authOptions);
   const role = session?.user?.role || "user";
-  if (!["admin", "superadmin"].includes(role.toLowerCase())) {
-    redirect("/403");
-  }
+  // if (!["admin", "superadmin"].includes(role.toLowerCase())) {
+  //   redirect("/403");
+  // }
   return (
     <div>AdminPage</div>
   )
