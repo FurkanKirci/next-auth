@@ -6,7 +6,7 @@ export default withAuth(
   (req) => {
     // ① NextAuth tarafından eklenen token'ı al
     const token = req.nextauth.token;
-
+    console.log("yarak furkan")
     // ② Henüz giriş yapılmamışsa direkt /login'e at
     if (!token) {
       return NextResponse.redirect(new URL("/login", req.url));
@@ -56,6 +56,7 @@ export default withAuth(
 // ── matcher – Next.js App Router destekli “path-pattern” kuralları ──
 export const config = {
   matcher: [
+    "/",
     // Dashboard korunsun (hem /dashboard hem de /dashboard/…)
     "/dashboard",        
     "/dashboard/:path*",
@@ -63,8 +64,8 @@ export const config = {
     "/admin",            
     "/admin/:path*",
     // SuperAdmin korunsun
-    "/superadmin",       
-    "/superadmin/:path*",
+    "/superAdmin",       
+    "/superAdmin/:path*",
     // User korunsun
     "/user",             
     "/user/:path*",

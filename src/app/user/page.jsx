@@ -6,9 +6,9 @@ const UserPage = async () => {
   const session = await getServerSession(authOptions);
 
   // Eğer oturum açılmamışsa /login'e yönlendir
-  if (!session) {
-    redirect("/login");
-  }
+  // if (!session) {
+  //   redirect("/login");
+  // }
   return (
     <div>UserPage</div>
   )
