@@ -56,7 +56,6 @@ export default withAuth(
 // ── matcher – Next.js App Router destekli “path-pattern” kuralları ──
 export const config = {
   matcher: [
-    "/",
     // Dashboard korunsun (hem /dashboard hem de /dashboard/…)
     "/dashboard",        
     "/dashboard/:path*",
